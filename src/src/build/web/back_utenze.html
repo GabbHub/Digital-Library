@@ -1,0 +1,181 @@
+<#include "back_framepublic.html">
+
+<body>
+    <div id="wrapper">
+        <#include "back_header.html">
+        <div id="page-wrapper" >
+            <div id="page-inner">
+
+                <#if utentedaassociare??>
+                <hr />
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>Utente da associare: ${utentedaassociare.nome} ${utentedaassociare.cognome}</h3>
+                            <form role="form" action="utenze">
+                                <label>Seleziona opera</label>
+                                <select class="form-control" name="opera" required>
+                                    <#list listaopere as opera>
+                                    <option value="${opera.id?c}">${opera.titolo}</option>
+                                    </#list>
+                                </select>
+                                <input  name="utente_associato"  type="hidden" value="${utentedaassociare.id?c}" required/>
+                                <input  name="utente_associato_gruppo"  type="hidden" value="${utentedaassociare.gruppo?c}" required/>
+                                <br/> 
+                                <input class="btn btn-primary" type="submit" value="Associa">
+                                <a class="btn btn-primary" href="utenze">Annulla</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <#else>
+                </#if>
+                <hr/>
+                <div class="row"> 
+                    <div class="col-md-12 col-sm-12 col-xs-12">                     
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Staff
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover" id="dataTables-staff">
+                                        <thead>
+                                            <tr>
+                                                <th>Ruolo</th>
+                                                <th>Nome</th>
+                                                <th>Cognome</th>
+                                                <th>Opera Associata</th>
+                                                <th>Operazione</th>       
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <#if listastaff??>
+                                            <#list listastaff as utente>
+                                            <tr>
+                                                <#if utente.gruppo==2>
+                                                <td>Acquisitore
+                                                </td>
+                                                <#elseif utente.gruppo==3>
+                                                <td>Revisione Acquisizione</td>
+                                                <#elseif utente.gruppo==4>
+                                                <td>Trascrizione</td>
+                                                <#elseif utente.gruppo==5>
+                                                <td>Revisore Trascrizione</td>
+                                                </#if>
+                                                <td>${utente.nome}</td>
+                                                <td>${utente.cognome}</td>
+                                                <#if utente.opera_associata??>
+                                                <td class="center">${utente.opera_associata}</td>
+                                                <td class="center"><form role="form" action="utenze" method="POST">
+                                                        <div class="form-group">
+                                                            <input  name="degrada"  type="hidden" value="${utente.id?c}" required/>                                             
+                                                            <input class="btn btn-danger" type="submit" value="Degrada">
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                                <#else>
+                                                <td class="center">Nessuna</td>
+                                                <td class="center"><form role="form" action="utenze" method="POST">
+                                                        <div class="form-group">
+                                                            <input  name="associa opera"  type="hidden" value="${utente.id?c}" required/>                                             
+                                                            <input class="btn btn-primary" type="submit" value="Associa Opera">
+                                                        </div>
+                                                    </form>
+                                                    <br/>
+                                                    <form role="form" action="utenze" method="POST">
+                                                        <div class="form-group">
+                                                            <input  name="degrada"  type="hidden" value="${utente.id?c}" required/>                                             
+                                                            <input class="btn btn-danger" type="submit" value="Degrada">
+                                                        </div>
+                                                    </form></td>
+                                                </#if>
+
+                                                </#list>
+                                                <#else>
+                                                </#if>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+                <hr/>
+                <div class="row"> 
+                    <div class="col-md-12 col-sm-12 col-xs-12">                     
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Utenza
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover" id="dataTables-utenza">
+                                        <thead>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <th>Cognome</th>
+                                                <th>Email</th>
+                                                <th>Promozione
+                                                </th>       
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <#if listautenza??>
+                                            <#list listautenza as utente>
+                                            <tr>
+                                                <td>${utente.nome}</td>
+                                                <td>${utente.cognome}</td>
+                                                <td>${utente.email}</td>
+                                                <td> <form role="form" action="utenze" style="width: 39px; margin-left: 10%; margin-bottom: 2%; float: left" method="POST">
+
+                                                        <input  name="2" type="hidden" value="${utente.id?c}" required/>
+                                                        <a title="Acquisitore">
+                                                            <button type="submit"><i class="fa fa-file-image-o fa-3x"  style="color:red;"></i></button>
+                                                        </a>
+
+                                                    </form>
+
+                                                    <form role="form" action="utenze"  style="width: 39px; margin-left: 10%;margin-bottom: 2%; float: left" method="POST">
+
+                                                        <input  name="4"  type="hidden" value="${utente.id?c}" required/>                                             
+                                                        <a title="Trascrittore">
+                                                            <button type="submit"><i class="fa fa-file-text-o fa-3x"  style="color:blue;"></i></button>
+                                                        </a>
+                                                    </form>
+
+                                                    <form role="form" action="utenze"style="width: 39px; margin-left: 10%; margin-bottom: 2%; float: left" method="POST">
+
+                                                        <input  name="3"  type="hidden" value="${utente.id?c}" required/>                                             
+                                                        <a title="Revisore acquisizioni">
+                                                            <button type="submit"><i class="fa fa-check-square-o fa-3x"  style="color:red;"></i></button>
+                                                        </a>
+
+                                                    </form>
+                                                    <form role="form" action="utenze" style="width: 39px; margin-left: 10%; margin-bottom: 2%; float: left" method="POST">
+                                                        <input  name="5"  type="hidden" value="${utente.id?c}" required/>                                             
+                                                        <a title="Revisore trascrizioni">
+                                                            <button type="submit"><i class="fa fa-check-square-o fa-3x"  style="color:blue;"></i></button>
+                                                        </a>
+
+                                                    </form></td>
+
+                                                </#list>
+                                                <#else>
+                                                </#if>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+                <!-- /. ROW -->
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+        <#include "back_footer.html">
+    </html>

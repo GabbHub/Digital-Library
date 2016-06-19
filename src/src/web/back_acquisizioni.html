@@ -1,0 +1,71 @@
+<#include "back_framepublic.html">
+<body>
+    <div id="wrapper">
+        <#include "back_header.html">
+        <div id="page-wrapper">
+            <div id="page-inner">   
+                <hr />
+                <div class="row">
+                    <div class="panel panel-primary" class="col-md-4 col-sm-4 col-xs-4">
+                        <div class="form-group">
+                            <div class="text-center">
+                                <label>
+                                    <div class="panel-heading">
+                                        <#if opera_associata??>
+                                        <h3>Caricamento Immagini per ${opera_associata.titolo}</h3>
+                                        <#else>
+                                        <h3>Nessuna Opera Ancora Associata</h3>
+                                        </#if>
+                                    </div>
+
+                                </label>
+                                <#if opera_associata??>
+                                <form  method="post" action="acquisizione" enctype="multipart/form-data">
+                                    <div class="text-center">
+                                        <div class="posiz_back">
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    Seleziona immagine
+                                                </div>
+                                                <div class="panel-body">
+                                                    <input  class="center-block" type="file" name="imgfile" id="filesToUpload" accept="image/*" multiple="multiple" onChange="makeFileList();" required/>
+                                                </div>									
+                                                <div class="text-center">
+                                                    <ul id="fileList"><li></li></ul>
+                                                </div>
+                                                <br>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" id="controllopagine" value="${(opera_associata.numero_pagine-1)?c}">esegui</button>
+                                    <button type="reset" class="btn btn-primary" onClick="deleteFileList()">annulla</button>
+                                </form>
+                                <#else>
+                                </#if>
+                                <#if risultato??>
+                                <h3>${risultato}</h3>
+                                <#else>
+                                </#if>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- /. PAGE WRAPPER  -->
+            </div>
+
+            <!-- /. WRAPPER  -->
+        </div>
+    </div>
+</body>
+<#include "back_footer.html">
+
+
+
+

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+    <#include "framepublic.html">
+    <#include "header.html">
+    <body>
+        <!-- start main -->
+        <div class="main_bg">
+            <div class="wrap">
+                <div class="main">
+                    <!-- start popup -->
+
+                    <!-- start gallery  -->
+                    <div class="container">
+                        <hr/>
+                        <div id="portfoliolist">
+                            <#if listaopere?first??>
+                            <#list listaopere as opera>
+                            <div class="portfolio-wrapper">	
+                                <#if opera.copertina??>
+                                <img src=${opera.copertina.file}  alt="Image 2" />
+                                <div class="label">
+                                    <div class="label-text"> 
+                                        <a href="details?opera=${opera.titolo}&img=${opera.copertina.numero_pagina?c}"><p class="text-title">${opera.titolo}</p></a>
+                                        <span class="text-category" style="color:white;">${opera.autore}</span>
+                                    </div>
+                                    <div class="label-bg"></div>
+                                </div>
+                                <#else>
+                                </#if>
+                            </div>	
+                            </#list>
+                            <#else>
+                            <p class="para">Nessuna Opera trovata siamo spiacenti.</p>
+                            </#if>
+                        </div>
+                        
+                    </div>
+                    <hr/>
+                             <#if parametro_ricerca??>
+                     <#if pagine??>
+                <div class="pagination">
+                    <ul>
+                        <#if (pagina_home-1>=0)>
+                        <li><a href="index?parametro_ricerca=${parametro_ricerca}&pagina_home=${pagina_home-1}&numeropagine=${numeropagine}">Precedente</a></li>
+                        <#else>
+                        </#if>
+                        <#if (pagine?size>1) >
+                        <#list pagine as pagina>
+                        <#if (pagina?index==pagina_home)>
+                        <li><a style="background-color: cadetblue;" href="index?parametro_ricerca=${parametro_ricerca}&pagina_home=${pagina?index}&numeropagine=${numeropagine}">${pagina?index+1}</a></li>
+                        <#else>
+                        <li><a href="index?parametro_ricerca=${parametro_ricerca}&pagina_home=${pagina?index}&numeropagine=${numeropagine}">${pagina?index+1}</a></li>
+                        </#if>
+                        </#list>
+                        </#if>
+                        <#if pagine?first??>
+                         <#if (pagina_home==pagine?size-1)>
+                         <#else>
+                        <li><a href="index?parametro_ricerca=${parametro_ricerca}&pagina_home=${pagina_home+1}&numeropagine=${numeropagine}">Successivo</a></li>
+                        </#if>
+                        <#else>
+                        </#if>
+                    </ul>
+                </div>
+                <#else>
+                </#if>
+                <#else>
+                <#if pagine??>
+                <div class="pagination">
+                    <ul>
+                        <#if (pagina_home-1>=0)>
+                        <li><a href="index?pagina_home=${pagina_home-1}&numeropagine=${numeropagine}">Precedente</a></li>
+                        <#else>
+                        </#if>
+                        <#if (pagine?size>1)>
+                        <#list pagine as pagina>
+                        <#if (pagina?index==pagina_home)>
+                        <li><a style="background-color: cadetblue;" href="index?pagina_home=${pagina?index}&numeropagine=${numeropagine}">${pagina?index+1}</a></li>
+                        <#else>
+                        <li><a href="index?pagina_home=${pagina?index}&numeropagine=${numeropagine}">${pagina?index+1}</a></li>
+                        </#if>
+                        </#list>
+                        </#if>
+                        <#if pagine?first??>
+                         <#if (pagina_home==pagine?size-1)>
+                         <#else>
+                        <li><a href="index?pagina_home=${pagina_home+1}&numeropagine=${numeropagine}">Successivo</a></li>
+                        </#if>
+                        <#else>
+                        </#if>
+                    </ul>
+                </div>
+                <#else>
+                </#if>
+                </#if>
+                </div><!-- end container -->
+       
+            </div>
+        </div>
+    </div>
+</body>
+<#include "footer.html">
+</html>

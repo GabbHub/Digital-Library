@@ -1,0 +1,60 @@
+<#include "back_framepublic.html">
+<body>
+    <div id="wrapper">
+        <#include "back_header.html">
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <!-- /. ROW  -->
+                <hr />
+                <!-- Form Elements -->
+
+                <div class="panel-body">
+                    <div class="row">
+                        <form action="backprofilo?staff=${staff}&active=${active}" method="POST">
+
+                            <div class="col-md-4">
+                                <h3>Modifica pasword</h3>
+                                <div class="form-group">
+                                    <input class="form-control" name="password" type="password" placeholder="Password attuale" required/>
+                                    <input class="form-control" name="nuova_password"id="password1" type="password" placeholder="Nuova password" required/>
+                                    <input class="form-control" name="conferma_nuova_password"id="password2" type="password" placeholder="Conferma nuova password" required/>
+                                </div>
+                                <input class="btn btn-primary" type="submit" onclick="checkdoublePass()" value="conferma">
+                                <button type="reset" class="btn btn-primary">annulla</button>
+                                <#if risultato_password??>
+                                <h5>${risultato_password}</h5>
+                                <#else>
+                                </#if>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <hr/>
+                <div class="panel-body">
+                    <div class="row">
+                        <form action="backprofilo?staff=${staff}&active=${active}" method="POST">
+                            <div class="col-md-4">
+                                <h3>Modifica indirizzo email</h3>
+                                <div class="form-group">
+                                    <input class="form-control" id="indirizzo1" name="nuovo_indirizzo" type="text" placeholder="Nuovo Indirizzo" required/>
+                                    <input class="form-control" id="indirizzo2"name="conferma_nuovo_indirizzo" type="text" placeholder="Conferma Nuovo Indirizzo" required/>
+                                </div>
+
+                                <input class="btn btn-primary" type="submit" onclick="checkdoubleemail()" value="conferma">
+                                <button type="reset" class="btn btn-primary">annulla</button>
+                                <#if risultato_indirizzo??>
+                                <h5>${risultato_indirizzo}</h5>
+                                <#else>
+                                </#if>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+</body>
+<#include "back_footer.html">
+</html>

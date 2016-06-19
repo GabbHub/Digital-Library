@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/DigitalLibrary">
+     <Resource 
+        name="digital_library" 
+        type="javax.sql.DataSource" 
+        auth="Container"
+        driverClassName="com.mysql.jdbc.Driver" 
+        url="jdbc:mysql://localhost:3306/digital_library" 
+        username="root"
+        password="sonobello" 
+        maxActive="20" 
+        maxIdle="5" 
+        maxWait="10000" 
+    />
+</Context>

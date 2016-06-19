@@ -1,0 +1,59 @@
+<!-- start header -->
+<div class="header_bg">
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">
+                <h1><a href="index"><img src="Template/images/logo.jpg" alt=""/></a></h1>
+            </div>
+            <div class="h_right">
+                <#if session??>
+                <ul class="menu"> 
+                    <li><b>Benvenuto ${session?html}</b></li>    
+                    <li class="active"><a href="index">Home</a></li>
+                    <li><a href="logout">Logout</a></li>        
+                </ul>
+
+                <#else>
+                <ul class="menu">                            
+                    <li class="active"><a href="index">Home</a></li>
+                    <li><a href="login">Login</a></li>
+                    <li><a href="register">Registrati</a></li>          
+                </ul>
+                </#if>
+                <div id="sb-search" class="sb-search">
+                    <form action="index">
+                        <input class="sb-search-input" placeholder="Inserisci parametro di ricerca" type="text" value="" name="parametro_ricerca" id="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="sb-icon-search"></span>
+                    </form>
+                </div>
+                <script src="Template/js/classie.js"></script>
+                <script src="Template/js/uisearch.js"></script>
+                <script>
+                    new UISearch(document.getElementById('sb-search'));
+                </script>
+                <!-- start smart_nav * -->
+                <nav class="nav">
+                    <#if session??>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index">Home</a></li>	              
+                        <li class="nav-item"><a href="logout">Logout</a></li>
+                        <div class="clear"></div>
+                    </ul>
+
+                    <#else>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index">Home</a></li>	              
+                        <li class="nav-item"><a href="register">Registrati</a></li>
+                        <li class="nav-item"><a href="login">Login</a></li>
+                        <div class="clear"></div>
+                    </ul>   
+                    </#if>
+                </nav>
+                <script type="text/javascript" src="Template/js/responsive.menu.js"></script>
+                <!-- end smart_nav * -->
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

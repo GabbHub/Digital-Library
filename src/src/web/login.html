@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <#include "framepublic.html">
+    <#include "header.html">
+    <body>
+        <div class="main_bg">
+            <div class="wrap">
+                <div class="main">
+                    <form action="login" method="post" class="form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label" for="inputEmail">Email <sup>*</sup></label>
+                            <div class="controls">
+                                <input type="text" name="email" id="inputEmail" placeholder="" required/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="inputPassword">Password <sup>*</sup></label>
+                            <div class="controls">
+                                <input type="password" name="password" id="inputPassword" placeholder="" required/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <#if risultato??>
+                            <p class="para">${risultato}</p>
+                            <#else>
+                            </#if>
+                            <div class="controls">
+                                <button type="submit" value="login" class="more-btn">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <#include "footer.html">
+</html>

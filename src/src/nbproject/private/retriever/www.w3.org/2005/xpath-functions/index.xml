@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--XSLT Processor: Saxonica SAXON HE 9.6.0.7-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="EN" xml:lang="EN">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.15), see www.w3.org" />
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8" />
+<title>XQuery, XPath, and XSLT Functions and Operators Namespace
+Document</title>
+<link rel="stylesheet" type="text/css" href=
+"http://www.w3.org/StyleSheets/TR/base.css" />
+</head>
+<body>
+<div class="head">
+<p><a href="http://www.w3.org/"><img src=
+"http://www.w3.org/Icons/w3c_home" alt="W3C" height="48" width=
+"72" /></a></p>
+<h1><a name="title" id="title"></a>XQuery, XPath, and XSLT
+Functions and Operators Namespace Document</h1>
+</div>
+<div class="toc">
+<h2><a name="contents" id="contents"></a>Table of Contents</h2>
+<p class="toc">1 <a href="#intro">Introduction</a><br />
+2 <a href="#fo-summary">XQuery and XPath Functions</a><br />
+3 <a href="#xslt-summary">XSL Transformations (XSLT)
+Functions</a><br />
+4 <a href="#schemas">XML Schema</a><br />
+&#160;&#160;&#160;&#160;4.1 <a href="#schema-analyze-string">The
+schema for fn:analyze-string</a><br />
+&#160;&#160;&#160;&#160;4.2 <a href="#schema-json">The schema for
+fn:json-to-xml and fn:xml-to-json</a><br />
+5 <a href="#normrefs">Normative References</a><br />
+6 <a href="#nonnormrefs">Non-Normative References</a><br /></p>
+</div>
+<hr />
+<div class="body">
+<div>
+<h2><a name="intro" id="intro"></a>1 Introduction</h2>
+<p>This document describes the namespace
+<code>http://www.w3.org/2005/xpath-functions</code> defined by the
+[XPath and XQuery Functions and Operators 3.1] and [XSLT 3.0]
+specifications (October 2014 and November 2014 versions,
+respectively). This namespace is identified by the namespace prefix
+<code>fn:</code>, which is a predefined prefix. For updated
+information, please refer to the latest version of the [XPath and
+XQuery Functions and Operators 3.1] and [XSLT 3.0]
+specifications.</p>
+<p>This document describes the names that are defined in this
+namespace at the time of publication. The W3C reserves the right to
+define additional names in this namespace in the future. [XPath and
+XQuery Functions and Operators 3.1] and [XSLT 3.0] are the
+<em>only</em> specifications that may amend this namespace.</p>
+<p>This document contains a directory of links to related
+resources, using RDDL (as defined in [Resource Directory
+Description Language (RDDL)]).</p>
+<p>It is GRDDL-enabled (as defined in [Gleaning Resource
+Descriptions from Dialects of Languages (GRDDL)]); that is to say
+that a GRDDL-compliant processor can extract useful RDF (as defined
+in [Resource Description Framework (RDF): Concepts and Abstract
+Syntax]) representations of the information contained herein.</p>
+</div>
+<div class="resource">
+<h2><a name="fo-summary" id="fo-summary"></a>2 XQuery and XPath
+Functions</h2>
+<p>This section lists all of the functions defined in the [XPath
+and XQuery Functions and Operators 3.1] specification. Each
+function and operator is uniquely identified with a URI of the
+form:
+“<code>http://www.w3.org/2005/xpath-functions#</code><em>name</em>”
+where <em>name</em> is the name of a function or operator, such as
+“max”: <code><a href=
+"#max">http://www.w3.org/2005/xpath-functions#max</a></code>.</p>
+<p>The normative definitions of these functions are in the [XPath
+and XQuery Functions and Operators 3.1] specification. For
+convenience, a very brief, non-normative summary of each function
+is provided. For details, follow the link on the “Summary:”
+introductory text below each function.</p>
+<h3><a name="QName" id="QName"></a>QName</h3>
+<p><strong>QName</strong>(xs:string?, xs:string) as xs:QName</p>
+<p>Returns an <code>xs:QName</code> value formed using a supplied
+namespace URI and lexical QName.</p>
+<h3><a name="available-environment-variables" id=
+"available-environment-variables"></a>available-environment-variables</h3>
+<p><strong>available-environment-variables</strong>() as
+xs:string*</p>
+<p>Returns a list of environment variable names that are suitable
+for passing to <code>fn:environment-variable</code>, as a (possibly
+empty) sequence of strings.</p>
+<h3><a name="avg" id="avg"></a>avg</h3>
+<p><strong>avg</strong>(xs:anyAtomicType*) as xs:anyAtomicType?</p>
+<p>Returns the average of the values in the input sequence
+<code>$arg</code>, that is, the sum of the values divided by the
+number of values.</p>
+<h3><a name="collection" id="collection"></a>collection</h3>
+<p><strong>collection</strong>() as item()*</p>
+<p><strong>collection</strong>(xs:string?) as item()*</p>
+<p>Returns a sequence of items identified by a collection URI; or a
+default collection if no URI is supplied.</p>
+<h3><a name="count" id="count"></a>count</h3>
+<p><strong>count</strong>(item()*) as xs:integer</p>
+<p>Returns the number of items in a sequence.</p>
+<h3><a name="current-date" id="current-date"></a>current-date</h3>
+<p><strong>current-date</strong>() as xs:date</p>
+<p>Returns the current date.</p>
+<h3><a name="current-dateTime" id=
+"current-dateTime"></a>current-dateTime</h3>
+<p><strong>current-dateTime</strong>() as xs:dateTimeStamp</p>
+<p>Returns the current date and time (with timezone).</p>
+<h3><a name="current-time" id="current-time"></a>current-time</h3>
+<p><strong>current-time</strong>() as xs:time</p>
+<p>Returns the current time.</p>
+<h3><a name="deep-equal" id="deep-equal"></a>deep-equal</h3>
+<p><strong>deep-equal</strong>(item()*, item()*) as xs:boolean</p>
+<p><strong>deep-equal</strong>(item()*, item()*, xs:string) as
+xs:boolean</p>
+<p>This function assesses whether two sequences are deep-equal to
+each other. To be deep-equal, they must contain items that are
+pairwise deep-equal; and for two items to be deep-equal, they must
+either be atomic values that compare equal, or nodes of the same
+kind, with the same name, whose children are deep-equal<span>, or
+maps with matching entries, or arrays with matching
+members.</span></p>
+<h3><a name="default-collation" id=
+"default-collation"></a>default-collation</h3>
+<p><strong>default-collation</strong>() as xs:string</p>
+<p>Returns the value of the default collation property from the
+static context.</p>
+<h3><a name="default-language" id=
+"default-language"></a>default-language</h3>
+<p><strong>default-language</strong>() as xs:language</p>
+<p>Returns the value of the default language property from the
+dynamic context.</p>
+<h3><a name="distinct-values" id=
+"distinct-values"></a>distinct-values</h3>
+<p><strong>distinct-values</strong>(xs:anyAtomicType*) as
+xs:anyAtomicType*</p>
+<p><strong>distinct-values</strong>(xs:anyAtomicType*, xs:string)
+as xs:anyAtomicType*</p>
+<p>Returns the values that appear in a sequence, with duplicates
+eliminated.</p>
+<h3><a name="doc" id="doc"></a>doc</h3>
+<p><strong>doc</strong>(xs:string?) as document-node()?</p>
+<p>Retrieves a document using a URI supplied as an
+<code>xs:string</code>, and returns the corresponding document
+node.</p>
+<h3><a name="doc-available" id=
+"doc-available"></a>doc-available</h3>
+<p><strong>doc-available</strong>(xs:string?) as xs:boolean</p>
+<p>The function returns true if and only if the function call
+<code>fn:doc($uri)</code> would return a document node.</p>
+<h3><a name="element-with-id" id=
+"element-with-id"></a>element-with-id</h3>
+<p><strong>element-with-id</strong>(xs:string*) as element()*</p>
+<p><strong>element-with-id</strong>(xs:string*, node()) as
+element()*</p>
+<p>Returns the sequence of element nodes that have an
+<code>ID</code> value matching the value of one or more of the
+<code>IDREF</code> values supplied in <code>$arg</code>.</p>
+<h3><a name="empty" id="empty"></a>empty</h3>
+<p><strong>empty</strong>(item()*) as xs:boolean</p>
+<p>Returns true if the argument is the empty sequence.</p>
+<h3><a name="environment-variable" id=
+"environment-variable"></a>environment-variable</h3>
+<p><strong>environment-variable</strong>(xs:string) as
+xs:string?</p>
+<p>Returns the value of a system environment variable, if it
+exists.</p>
+<h3><a name="exactly-one" id="exactly-one"></a>exactly-one</h3>
+<p><strong>exactly-one</strong>(item()*) as item()</p>
+<p>Returns <code>$arg</code> if it contains exactly one item.
+Otherwise, raises an error.</p>
+<h3><a name="exists" id="exists"></a>exists</h3>
+<p><strong>exists</strong>(item()*) as xs:boolean</p>
+<p>Returns true if the argument is a non-empty sequence.</p>
+<h3><a name="filter" id="filter"></a>filter</h3>
+<p><strong>filter</strong>(item()*, function(item()) as xs:boolean)
+as item()*</p>
+<p>Returns those items from the sequence <var>$seq</var> for which
+the supplied function <var>$f</var> returns true.</p>
+<h3><a name="fold-left" id="fold-left"></a>fold-left</h3>
+<p><strong>fold-left</strong>(item()*, item()*, function(item()*,
+item()) as item()*) as item()*</p>
+<p>Processes the supplied sequence from left to right, applying the
+supplied function repeatedly to each item in turn, together with an
+accumulated result value.</p>
+<h3><a name="fold-right" id="fold-right"></a>fold-right</h3>
+<p><strong>fold-right</strong>(item()*, item()*, function(item(),
+item()*) as item()*) as item()*</p>
+<p>Processes the supplied sequence from right to left, applying the
+supplied function repeatedly to each item in turn, together with an
+accumulated result value.</p>
+<h3><a name="for-each" id="for-each"></a>for-each</h3>
+<p><strong>for-each</strong>(item()*, function(item()) as item()*)
+as item()*</p>
+<p>Applies the function item <var>$f</var> to every item from the
+sequence <var>$seq</var> in turn, returning the concatenation of
+the resulting sequences in order.</p>
+<h3><a name="for-each-pair" id=
+"for-each-pair"></a>for-each-pair</h3>
+<p><strong>for-each-pair</strong>(item()*, item()*,
+function(item(), item()) as item()*) as item()*</p>
+<p>Applies the function item <var>$f</var> to successive pairs of
+items taken one from <var>$seq1</var> and one from
+<var>$seq2</var>, returning the concatenation of the resulting
+sequences in order.</p>
+<h3><a name="format-date" id="format-date"></a>format-date</h3>
+<p><strong>format-date</strong>(xs:date?, xs:string) as
+xs:string?</p>
+<p><strong>format-date</strong>(xs:date?, xs:string, xs:string?,
+xs:string?, xs:string?) as xs:string?</p>
+<p>Returns a string containing an <code>xs:date</code> value
+formatted for display.</p>
+<h3><a name="format-dateTime" id=
+"format-dateTime"></a>format-dateTime</h3>
+<p><strong>format-dateTime</strong>(xs:dateTime?, xs:string) as
+xs:string?</p>
+<p><strong>format-dateTime</strong>(xs:dateTime?, xs:string,
+xs:string?, xs:string?, xs:string?) as xs:string?</p>
+<p>Returns a string containing an <code>xs:dateTime</code> value
+formatted for display.</p>
+<h3><a name="format-time" id="format-time"></a>format-time</h3>
+<p><strong>format-time</strong>(xs:time?, xs:string) as
+xs:string?</p>
+<p><strong>format-time</strong>(xs:time?, xs:string, xs:string?,
+xs:string?, xs:string?) as xs:string?</p>
+<p>Returns a string containing an <code>xs:time</code> value
+formatted for display.</p>
+<h3><a name="function-arity" id=
+"function-arity"></a>function-arity</h3>
+<p><strong>function-arity</strong>(function(*)) as xs:integer</p>
+<p>Returns the arity of the function identified by a function
+item.</p>
+<h3><a name="function-lookup" id=
+"function-lookup"></a>function-lookup</h3>
+<p><strong>function-lookup</strong>(xs:QName, xs:integer) as
+function(*)?</p>
+<p>Returns the function having a given name and arity, if there is
+one.</p>
+<h3><a name="function-name" id=
+"function-name"></a>function-name</h3>
+<p><strong>function-name</strong>(function(*)) as xs:QName?</p>
+<p>Returns the name of the function identified by a function
+item.</p>
+<h3><a name="generate-id" id="generate-id"></a>generate-id</h3>
+<p><strong>generate-id</strong>() as xs:string</p>
+<p><strong>generate-id</strong>(node()?) as xs:string</p>
+<p>This function returns a string that uniquely identifies a given
+node.</p>
+<h3><a name="has-children" id="has-children"></a>has-children</h3>
+<p><strong>has-children</strong>() as xs:boolean</p>
+<p><strong>has-children</strong>(node()?) as xs:boolean</p>
+<p>Returns true if the supplied node has one or more child nodes
+(of any kind).</p>
+<h3><a name="head" id="head"></a>head</h3>
+<p><strong>head</strong>(item()*) as item()?</p>
+<p>Returns the first item in a sequence.</p>
+<h3><a name="id" id="id"></a>id</h3>
+<p><strong>id</strong>(xs:string*) as element()*</p>
+<p><strong>id</strong>(xs:string*, node()) as element()*</p>
+<p>Returns the sequence of element nodes that have an
+<code>ID</code> value matching the value of one or more of the
+<code>IDREF</code> values supplied in <code>$arg</code>.</p>
+<h3><a name="idref" id="idref"></a>idref</h3>
+<p><strong>idref</strong>(xs:string*) as node()*</p>
+<p><strong>idref</strong>(xs:string*, node()) as node()*</p>
+<p>Returns the sequence of element or attribute nodes with an
+<code>IDREF</code> value matching the value of one or more of the
+<code>ID</code> values supplied in <code>$arg</code>.</p>
+<h3><a name="implicit-timezone" id=
+"implicit-timezone"></a>implicit-timezone</h3>
+<p><strong>implicit-timezone</strong>() as xs:dayTimeDuration</p>
+<p>Returns the value of the implicit timezone property from the
+dynamic context.</p>
+<h3><a name="in-scope-prefixes" id=
+"in-scope-prefixes"></a>in-scope-prefixes</h3>
+<p><strong>in-scope-prefixes</strong>(element()) as xs:string*</p>
+<p>Returns the prefixes of the in-scope namespaces for an element
+node.</p>
+<h3><a name="index-of" id="index-of"></a>index-of</h3>
+<p><strong>index-of</strong>(xs:anyAtomicType*, xs:anyAtomicType)
+as xs:integer*</p>
+<p><strong>index-of</strong>(xs:anyAtomicType*, xs:anyAtomicType,
+xs:string) as xs:integer*</p>
+<p>Returns a sequence of positive integers giving the positions
+within the sequence <code>$seq</code> of items that are equal to
+<code>$search</code>.</p>
+<h3><a name="innermost" id="innermost"></a>innermost</h3>
+<p><strong>innermost</strong>(node()*) as node()*</p>
+<p>Returns every node within the input sequence that is not an
+ancestor of another member of the input sequence; the nodes are
+returned in document order with duplicates eliminated.</p>
+<h3><a name="insert-before" id=
+"insert-before"></a>insert-before</h3>
+<p><strong>insert-before</strong>(item()*, xs:integer, item()*) as
+item()*</p>
+<p>Returns a sequence constructed by inserting an item or a
+sequence of items at a given position within an existing
+sequence.</p>
+<h3><a name="lang" id="lang"></a>lang</h3>
+<p><strong>lang</strong>(xs:string?) as xs:boolean</p>
+<p><strong>lang</strong>(xs:string?, node()) as xs:boolean</p>
+<p>This function tests whether the language of <code>$node</code>,
+or the context item if the second argument is omitted, as specified
+by <code>xml:lang</code> attributes is the same as, or is a
+sublanguage of, the language specified by
+<code>$testlang</code>.</p>
+<h3><a name="last" id="last"></a>last</h3>
+<p><strong>last</strong>() as xs:integer</p>
+<p>Returns the context size from the dynamic context.</p>
+<h3><a name="local-name" id="local-name"></a>local-name</h3>
+<p><strong>local-name</strong>() as xs:string</p>
+<p><strong>local-name</strong>(node()?) as xs:string</p>
+<p>Returns the local part of the name of <code>$arg</code> as an
+<code>xs:string</code> that is either the zero-length string, or
+has the lexical form of an <code>xs:NCName</code>.</p>
+<h3><a name="local-name-from-QName" id=
+"local-name-from-QName"></a>local-name-from-QName</h3>
+<p><strong>local-name-from-QName</strong>(xs:QName?) as
+xs:NCName?</p>
+<p>Returns the local part of the supplied QName.</p>
+<h3><a name="max" id="max"></a>max</h3>
+<p><strong>max</strong>(xs:anyAtomicType*) as xs:anyAtomicType?</p>
+<p><strong>max</strong>(xs:anyAtomicType*, xs:string) as
+xs:anyAtomicType?</p>
+<p>Returns a value that is equal to the highest value appearing in
+the input sequence.</p>
+<h3><a name="min" id="min"></a>min</h3>
+<p><strong>min</strong>(xs:anyAtomicType*) as xs:anyAtomicType?</p>
+<p><strong>min</strong>(xs:anyAtomicType*, xs:string) as
+xs:anyAtomicType?</p>
+<p>Returns a value that is equal to the lowest value appearing in
+the input sequence.</p>
+<h3><a name="name" id="name"></a>name</h3>
+<p><strong>name</strong>() as xs:string</p>
+<p><strong>name</strong>(node()?) as xs:string</p>
+<p>Returns the name of a node, as an <code>xs:string</code> that is
+either the zero-length string, or has the lexical form of an
+<code>xs:QName</code>.</p>
+<h3><a name="namespace-uri" id=
+"namespace-uri"></a>namespace-uri</h3>
+<p><strong>namespace-uri</strong>() as xs:anyURI</p>
+<p><strong>namespace-uri</strong>(node()?) as xs:anyURI</p>
+<p>Returns the namespace URI part of the name of <code>$arg</code>,
+as an <code>xs:anyURI</code> value.</p>
+<h3><a name="namespace-uri-for-prefix" id=
+"namespace-uri-for-prefix"></a>namespace-uri-for-prefix</h3>
+<p><strong>namespace-uri-for-prefix</strong>(xs:string?, element())
+as xs:anyURI?</p>
+<p>Returns the namespace URI of one of the in-scope namespaces for
+<code>$element</code>, identified by its namespace prefix.</p>
+<h3><a name="namespace-uri-from-QName" id=
+"namespace-uri-from-QName"></a>namespace-uri-from-QName</h3>
+<p><strong>namespace-uri-from-QName</strong>(xs:QName?) as
+xs:anyURI?</p>
+<p>Returns the namespace URI part of the supplied QName.</p>
+<h3><a name="node-name" id="node-name"></a>node-name</h3>
+<p><strong>node-name</strong>() as xs:QName?</p>
+<p><strong>node-name</strong>(node()?) as xs:QName?</p>
+<p>Returns the name of a node, as an <code>xs:QName</code>.</p>
+<h3><a name="number" id="number"></a>number</h3>
+<p><strong>number</strong>() as xs:double</p>
+<p><strong>number</strong>(xs:anyAtomicType?) as xs:double</p>
+<p>Returns the value indicated by <code>$arg</code> or, if
+<code>$arg</code> is not specified, the context item after
+atomization, converted to an <code>xs:double</code>.</p>
+<h3><a name="one-or-more" id="one-or-more"></a>one-or-more</h3>
+<p><strong>one-or-more</strong>(item()*) as item()+</p>
+<p>Returns <code>$arg</code> if it contains one or more items.
+Otherwise, raises an error.</p>
+<h3><a name="outermost" id="outermost"></a>outermost</h3>
+<p><strong>outermost</strong>(node()*) as node()*</p>
+<p>Returns every node within the input sequence that has no
+ancestor that is itself a member of the input sequence; the nodes
+are returned in document order with duplicates eliminated.</p>
+<h3><a name="parse-ietf-date" id=
+"parse-ietf-date"></a>parse-ietf-date</h3>
+<p><strong>parse-ietf-date</strong>(xs:string?) as xs:dateTime?</p>
+<p>Parses a string containing the date and time in IETF format,
+returning the corresponding <code>xs:dateTime</code> value.</p>
+<h3><a name="parse-xml" id="parse-xml"></a>parse-xml</h3>
+<p><strong>parse-xml</strong>(xs:string?) as
+document-node(element(*))?</p>
+<p>This function takes as input an XML document represented as a
+string, and returns the document node at the root of an XDM tree
+representing the parsed document.</p>
+<h3><a name="parse-xml-fragment" id=
+"parse-xml-fragment"></a>parse-xml-fragment</h3>
+<p><strong>parse-xml-fragment</strong>(xs:string?) as
+document-node()?</p>
+<p>This function takes as input an XML external entity represented
+as a string, and returns the document node at the root of an XDM
+tree representing the parsed document fragment.</p>
+<h3><a name="path" id="path"></a>path</h3>
+<p><strong>path</strong>() as xs:string?</p>
+<p><strong>path</strong>(node()?) as xs:string?</p>
+<p>Returns a path expression that can be used to select the
+supplied node relative to the root of its containing document.</p>
+<h3><a name="position" id="position"></a>position</h3>
+<p><strong>position</strong>() as xs:integer</p>
+<p>Returns the context position from the dynamic context.</p>
+<h3><a name="prefix-from-QName" id=
+"prefix-from-QName"></a>prefix-from-QName</h3>
+<p><strong>prefix-from-QName</strong>(xs:QName?) as xs:NCName?</p>
+<p>Returns the prefix component of the supplied QName.</p>
+<h3><a name="random-number-generator" id=
+"random-number-generator"></a>random-number-generator</h3>
+<p><strong>random-number-generator</strong>() as map(xs:string,
+item())</p>
+<p><strong>random-number-generator</strong>(xs:anyAtomicType) as
+map(xs:string, item())</p>
+<p>Returns a random number generator, which can be used to generate
+sequences of random numbers.</p>
+<h3><a name="remove" id="remove"></a>remove</h3>
+<p><strong>remove</strong>(item()*, xs:integer) as item()*</p>
+<p>Returns a new sequence containing all the items of
+<code>$target</code> except the item at position
+<code>$position</code>.</p>
+<h3><a name="resolve-QName" id=
+"resolve-QName"></a>resolve-QName</h3>
+<p><strong>resolve-QName</strong>(xs:string?, element()) as
+xs:QName?</p>
+<p>Returns an <code>xs:QName</code> value (that is, an
+expanded-QName) by taking an <code>xs:string</code> that has the
+lexical form of an <code>xs:QName</code> (a string in the form
+"prefix:local-name" or "local-name") and resolving it using the
+in-scope namespaces for a given element.</p>
+<h3><a name="reverse" id="reverse"></a>reverse</h3>
+<p><strong>reverse</strong>(item()*) as item()*</p>
+<p>Reverses the order of items in a sequence.</p>
+<h3><a name="root" id="root"></a>root</h3>
+<p><strong>root</strong>() as node()</p>
+<p><strong>root</strong>(node()?) as node()?</p>
+<p>Returns the root of the tree to which <code>$arg</code> belongs.
+This will usually, but not necessarily, be a document node.</p>
+<h3><a name="serialize" id="serialize"></a>serialize</h3>
+<p><strong>serialize</strong>(item()*) as xs:string</p>
+<p><strong>serialize</strong>(item()*, item()?) as xs:string</p>
+<p>This function serializes the supplied input sequence
+<code>$arg</code> as described in [xslt-xquery-serialization-31],
+returning the serialized representation of the sequence as a
+string.</p>
+<h3><a name="static-base-uri" id=
+"static-base-uri"></a>static-base-uri</h3>
+<p><strong>static-base-uri</strong>() as xs:anyURI?</p>
+<p>This function returns the value of the Static Base URI property
+from the static context.</p>
+<h3><a name="subsequence" id="subsequence"></a>subsequence</h3>
+<p><strong>subsequence</strong>(item()*, xs:double) as item()*</p>
+<p><strong>subsequence</strong>(item()*, xs:double, xs:double) as
+item()*</p>
+<p>Returns the contiguous sequence of items in the value of
+<code>$sourceSeq</code> beginning at the position indicated by the
+value of <code>$startingLoc</code> and continuing for the number of
+items indicated by the value of <code>$length</code>.</p>
+<h3><a name="sum" id="sum"></a>sum</h3>
+<p><strong>sum</strong>(xs:anyAtomicType*) as xs:anyAtomicType</p>
+<p><strong>sum</strong>(xs:anyAtomicType*, xs:anyAtomicType?) as
+xs:anyAtomicType?</p>
+<p>Returns a value obtained by adding together the values in
+<code>$arg</code>.</p>
+<h3><a name="tail" id="tail"></a>tail</h3>
+<p><strong>tail</strong>(item()*) as item()*</p>
+<p>Returns all but the first item in a sequence.</p>
+<h3><a name="unordered" id="unordered"></a>unordered</h3>
+<p><strong>unordered</strong>(item()*) as item()*</p>
+<p>Returns the items of <code>$sourceSeq</code> in an
+implementation-dependent order.</p>
+<h3><a name="unparsed-text" id=
+"unparsed-text"></a>unparsed-text</h3>
+<p><strong>unparsed-text</strong>(xs:string?) as xs:string?</p>
+<p><strong>unparsed-text</strong>(xs:string?, xs:string) as
+xs:string?</p>
+<p>The <code>fn:unparsed-text</code> function reads an external
+resource (for example, a file) and returns a string representation
+of the resource.</p>
+<h3><a name="unparsed-text-available" id=
+"unparsed-text-available"></a>unparsed-text-available</h3>
+<p><strong>unparsed-text-available</strong>(xs:string?) as
+xs:boolean</p>
+<p><strong>unparsed-text-available</strong>(xs:string?, xs:string)
+as xs:boolean</p>
+<p>Because errors in evaluating the <code>fn:unparsed-text</code>
+function are non-recoverable, these two functions are provided to
+allow an application to determine whether a call with particular
+arguments would succeed.</p>
+<h3><a name="unparsed-text-lines" id=
+"unparsed-text-lines"></a>unparsed-text-lines</h3>
+<p><strong>unparsed-text-lines</strong>(xs:string?) as
+xs:string*</p>
+<p><strong>unparsed-text-lines</strong>(xs:string?, xs:string) as
+xs:string*</p>
+<p>The <code>fn:unparsed-text-lines</code> function reads an
+external resource (for example, a file) and returns its contents as
+a sequence of strings, one for each line of text in the string
+representation of the resource.</p>
+<h3><a name="uri-collection" id=
+"uri-collection"></a>uri-collection</h3>
+<p><strong>uri-collection</strong>() as xs:anyURI*</p>
+<p><strong>uri-collection</strong>(xs:string?) as xs:anyURI*</p>
+<p>Returns a sequence of <code>xs:anyURI</code> values representing
+the URIs in a URI collection.</p>
+<h3><a name="zero-or-one" id="zero-or-one"></a>zero-or-one</h3>
+<p><strong>zero-or-one</strong>(item()*) as item()?</p>
+<p>Returns <code>$arg</code> if it contains zero or one items.
+Otherwise, raises an error.</p>
+</div>
+<div class="resource">
+<h2><a name="xslt-summary" id="xslt-summary"></a>3 XSL
+Transformations (XSLT) Functions</h2>
+<p>This section lists all of the functions defined in the [XSLT
+3.0] specification. Each function and operator is uniquely
+identified with a URI of the form:
+“<code>http://www.w3.org/2005/xpath-functions#</code><em>name</em>”
+where <em>name</em> is the name of a function or operator, such as
+“system-property”: <code><a href=
+"#system-property">http://www.w3.org/2005/xpath-functions#system-property</a></code>.</p>
+<p>The normative definitions of these functions are in the [XSLT
+3.0] specification. For convenience, a very brief, non-normative
+summary of each function is provided. For details, follow the link
+on the “Summary:” introductory text below each function.</p>
+<h3><a name="accumulator-after" id=
+"accumulator-after"></a>accumulator-after</h3>
+<p><strong>accumulator-after</strong>(xs:string) as item()*</p>
+<p>Returns the post-descent value of the selected accumulator at
+the context node.</p>
+<h3><a name="accumulator-before" id=
+"accumulator-before"></a>accumulator-before</h3>
+<p><strong>accumulator-before</strong>(xs:string) as item()*</p>
+<p>Returns the pre-descent value of the selected accumulator at the
+context node.</p>
+<h3><a name="available-system-properties" id=
+"available-system-properties"></a>available-system-properties</h3>
+<p><strong>available-system-properties</strong>() as xs:QName*</p>
+<p>Returns a list of system property names that are suitable for
+passing to the <code>system-property</code> function, as a sequence
+of QNames.</p>
+<h3><a name="collation-key" id=
+"collation-key"></a>collation-key</h3>
+<p><strong>collation-key</strong>(xs:string) as
+xs:anyAtomicType</p>
+<p><strong>collation-key</strong>(xs:string, xs:string) as
+xs:anyAtomicType</p>
+<p>Given a key and a collation, generates an internal value with
+the property that the internal value is the same for any two keys
+that compare equal under the given collation.</p>
+<h3><a name="contains" id="contains"></a>contains</h3>
+<p><strong>contains</strong>(map(*), xs:anyAtomicType) as
+xs:boolean</p>
+<p>Tests whether a supplied map contains an entry for a given
+key</p>
+<h3><a name="copy-of" id="copy-of"></a>copy-of</h3>
+<p><strong>copy-of</strong>() as item()</p>
+<p><strong>copy-of</strong>(item()*) as item()*</p>
+<p>Returns a deep copy of the <span>sequence</span> supplied as the
+<code>$input</code> argument, or of the context <span>item</span>
+if the argument is absent.</p>
+<h3><a name="current" id="current"></a>current</h3>
+<p><strong>current</strong>() as item()</p>
+<p>Returns the item that is the context item for the evaluation of
+the containing XPath expression</p>
+<h3><a name="current-group" id=
+"current-group"></a>current-group</h3>
+<p><strong>current-group</strong>() as item()*</p>
+<p>Returns the group currently being processed by an
+<code>xsl:for-each-group</code> instruction.</p>
+<h3><a name="current-grouping-key" id=
+"current-grouping-key"></a>current-grouping-key</h3>
+<p><strong>current-grouping-key</strong>() as xs:anyAtomicType*</p>
+<p>Returns the grouping key of the group currently being processed
+using the <code>xsl:for-each-group</code> instruction.</p>
+<h3><a name="current-merge-group" id=
+"current-merge-group"></a>current-merge-group</h3>
+<p><strong>current-merge-group</strong>() as item()*</p>
+<p><strong>current-merge-group</strong>(xs:string) as item()*</p>
+<p>Returns the group of items currently being processed by an
+<code>xsl:merge</code> instruction.</p>
+<h3><a name="current-merge-key" id=
+"current-merge-key"></a>current-merge-key</h3>
+<p><strong>current-merge-key</strong>() as xs:anyAtomicType*</p>
+<p>Returns the <span>merge</span> key of the <span>merge</span>
+group currently being processed using the <code>xsl:merge</code>
+instruction.</p>
+<h3><a name="current-output-uri" id=
+"current-output-uri"></a>current-output-uri</h3>
+<p><strong>current-output-uri</strong>() as xs:anyURI?</p>
+<p>Returns the value of the .</p>
+<h3><a name="deep-equal" id="deep-equal"></a>deep-equal</h3>
+<p><strong>deep-equal</strong>(item()*, item()*) as xs:boolean</p>
+<p><strong>deep-equal</strong>(item()*, item()*, xs:string) as
+xs:boolean</p>
+<p>This function assesses whether two sequences are deep-equal to
+each other. The function as described here extends the definition
+of the XPath 3.0 <code>deep-equal</code> to explain how it should
+handle maps; it is intended to replace the existing
+<code>deep-equal</code> function at some stage in the future.</p>
+<h3><a name="document" id="document"></a>document</h3>
+<p><strong>document</strong>(item()*) as node()*</p>
+<p><strong>document</strong>(item()*, node()) as node()*</p>
+<p>Provides access to XML documents identified by a URI.</p>
+<h3><a name="element-available" id=
+"element-available"></a>element-available</h3>
+<p><strong>element-available</strong>(xs:string) as xs:boolean</p>
+<p>Determines whether a particular instruction is or is not
+available for use. The function is particularly useful for calling
+within an <code>[xsl:]use-when</code> attribute (see ) to test
+whether a particular is available.</p>
+<h3><a name="entry" id="entry"></a>entry</h3>
+<p><strong>entry</strong>(xs:anyAtomicType, item()*) as map(*)</p>
+<p><span>Returns</span> a map that contains a single entry (a
+key-value pair).</p>
+<h3><a name="for-each" id="for-each"></a>for-each</h3>
+<p><strong>for-each</strong>(map(*), function(xs:anyAtomicType,
+item()*)) as item()*</p>
+<p>Applies a supplied function to every entry in a map, returning
+the concatenation of the results.</p>
+<h3><a name="function-available" id=
+"function-available"></a>function-available</h3>
+<p><strong>function-available</strong>(xs:string) as xs:boolean</p>
+<p><strong>function-available</strong>(xs:string, xs:integer) as
+xs:boolean</p>
+<p>Determines whether a particular function is or is not available
+for use. The function is particularly useful for calling within an
+<code>[xsl:]use-when</code> attribute (see ) to test whether a
+particular is available.</p>
+<h3><a name="get" id="get"></a>get</h3>
+<p><strong>get</strong>(map(*), xs:anyAtomicType) as item()*</p>
+<p>Returns the value associated with a supplied key in a given
+map.</p>
+<h3><a name="json-to-xml" id="json-to-xml"></a>json-to-xml</h3>
+<p><strong>json-to-xml</strong>(xs:string) as document-node()</p>
+<p><strong>json-to-xml</strong>(xs:string, map(*)) as
+document-node()</p>
+<p>Parses a string supplied in the form of a JSON text, returning
+the results in the form of an XML <span>document node</span>.</p>
+<h3><a name="key" id="key"></a>key</h3>
+<p><strong>key</strong>(xs:string, xs:anyAtomicType*) as
+node()*</p>
+<p><strong>key</strong>(xs:string, xs:anyAtomicType*, node()) as
+node()*</p>
+<p>Returns the nodes that match a supplied key value.</p>
+<h3><a name="keys" id="keys"></a>keys</h3>
+<p><strong>keys</strong>(map(*)) as xs:anyAtomicType*</p>
+<p>Returns a sequence containing all the keys present in a map</p>
+<h3><a name="merge" id="merge"></a>merge</h3>
+<p><strong>merge</strong>(map(*)*) as map(*)</p>
+<p>Returns a map that combines the entries from a number of
+existing maps.</p>
+<h3><a name="put" id="put"></a>put</h3>
+<p><strong>put</strong>(map(*), xs:anyAtomicType, item()*) as
+map(*)</p>
+<p>Returns a map containing all the contents of the supplied map,
+but with an additional entry, which replaces any existing entry for
+the same key.</p>
+<h3><a name="regex-group" id="regex-group"></a>regex-group</h3>
+<p><strong>regex-group</strong>(xs:integer) as xs:string</p>
+<p>Returns the string captured by a parenthesized subexpression of
+the regular expression used during evaluation of the
+<code>xsl:analyze-string</code> instruction.</p>
+<h3><a name="remove" id="remove"></a>remove</h3>
+<p><strong>remove</strong>(map(*), xs:anyAtomicType) as map(*)</p>
+<p>Returns a map containing all the entries from a supplied map,
+except (typically) one.</p>
+<h3><a name="same-key" id="same-key"></a>same-key</h3>
+<p><strong>same-key</strong>(xs:anyAtomicType, xs:anyAtomicType) as
+xs:boolean</p>
+<p>Determines whether two atomic values can coexist as separate
+keys within a map.</p>
+<h3><a name="size" id="size"></a>size</h3>
+<p><strong>size</strong>(map(*)) as xs:integer</p>
+<p>Returns the number of entries in the supplied map.</p>
+<h3><a name="snapshot" id="snapshot"></a>snapshot</h3>
+<p><strong>snapshot</strong>() as item()</p>
+<p><strong>snapshot</strong>(item()*) as item()*</p>
+<p>Returns a copy of a sequence, retaining copies of the ancestors
+and descendants of any node in the input sequence, together with
+their attributes and namespaces.</p>
+<h3><a name="stream-available" id=
+"stream-available"></a>stream-available</h3>
+<p><strong>stream-available</strong>(xs:string?) as xs:boolean</p>
+<p>Determines, as far as possible, whether a document is available
+for streamed processing using <code>xsl:stream</code>.</p>
+<h3><a name="system-property" id=
+"system-property"></a>system-property</h3>
+<p><strong>system-property</strong>(xs:string) as xs:string</p>
+<p>Returns the value of a system property</p>
+<h3><a name="type-available" id=
+"type-available"></a>type-available</h3>
+<p><strong>type-available</strong>(xs:string) as xs:boolean</p>
+<p>Used to control how a stylesheet behaves if a particular schema
+type is or is not available in the static context.</p>
+<h3><a name="unparsed-entity-public-id" id=
+"unparsed-entity-public-id"></a>unparsed-entity-public-id</h3>
+<p><strong>unparsed-entity-public-id</strong>(xs:string) as
+xs:string</p>
+<p><strong>unparsed-entity-public-id</strong>(xs:string, node()) as
+xs:string</p>
+<p>Returns the public identifier of an unparsed entity</p>
+<h3><a name="unparsed-entity-uri" id=
+"unparsed-entity-uri"></a>unparsed-entity-uri</h3>
+<p><strong>unparsed-entity-uri</strong>(xs:string) as xs:anyURI</p>
+<p><strong>unparsed-entity-uri</strong>(xs:string, node()) as
+xs:anyURI</p>
+<p>Returns the URI (system identifier) of an unparsed entity</p>
+<h3><a name="xml-to-json" id="xml-to-json"></a>xml-to-json</h3>
+<p><strong>xml-to-json</strong>(node()) as xs:string</p>
+<p><strong>xml-to-json</strong>(node(), map(*)) as xs:string</p>
+<p>Converts an XML tree, whose format corresponds to the XML
+representation of JSON defined in this specification, into a string
+conforming to the JSON grammar.</p>
+</div>
+<div class="resource">
+<h2><a name="schemas" id="schemas"></a>4 XML Schema</h2>
+<p>Two functions, <code>fn:analyze-string</code> and
+<code>fn:json-to-xml</code>, return results that are always valid
+according to a defined XSD schema. A third function,
+<code>fn:xml-to-json</code>, requires input that is valid according
+to this schema.</p>
+<p>The target namespace of these schema components is
+<code>http://www.w3.org/2005/xpath-functions</code>.</p>
+<div class="div2">
+<h3><a name="schema-analyze-string" id=
+"schema-analyze-string"></a>4.1 The schema for
+fn:analyze-string</h3>
+<p>The function <code>fn:analyze-string()</code>, identified in
+section <a href="#fo-summary"><b>2 XQuery and XPath
+Functions</b></a> above, returns results that are always valid
+according to an XML Schema specified in [XPath and XQuery Functions
+and Operators 3.1]. That XML Schema defines four XML elements and
+three XML Schema complex types. The XML elements are named:</p>
+<blockquote>
+<p>&lt;analyze-string-result&gt;<br />
+&lt;match&gt;<br />
+&lt;non-match&gt;<br />
+&lt;group&gt;</p>
+</blockquote>
+<p>The XML Schema complex types are named:</p>
+<blockquote>
+<p>analyze-string-result-type<br />
+match-type<br />
+group-type</p>
+</blockquote>
+<p>These schema components define the XML syntax of the result
+returned by <code>fn:analyze-string</code> as defined in [XPath and
+XQuery Functions and Operators 3.1]. They are specified in a schema
+document located at <a href=
+"http://www.w3.org/2014/11/xslt-30/analyze-string.xsd">http://www.w3.org/2014/11/xslt-30/analyze-string.xsd</a>.</p>
+</div>
+<div class="div2">
+<h3><a name="schema-json" id="schema-json"></a>4.2 The schema for
+fn:json-to-xml and fn:xml-to-json</h3>
+<p>The function <code>fn:json-to-xml()</code>, identified in
+section <a href="#fo-summary"><b>2 XQuery and XPath
+Functions</b></a> above, returns results that are always valid
+according to an XML Schema specified in [XPath and XQuery Functions
+and Operators 3.1]. The function <code>fn:xml-to-json()</code>,
+likewise, requires its input to be valid against this schema. That
+XML Schema defines six global element declarations and five XML
+Schema complex types. The element declarations are named:</p>
+<blockquote>
+<p>&lt;map&gt;<br />
+&lt;array&gt;<br />
+&lt;string&gt;<br />
+&lt;number&gt;<br />
+&lt;boolean&gt;<br />
+&lt;null&gt;</p>
+</blockquote>
+<p>The XML Schema complex types are named:</p>
+<blockquote>
+<p>mapType<br />
+arrayType<br />
+stringType<br />
+numberType<br />
+nullType</p>
+</blockquote>
+</div>
+<p>These schema components define the XML syntax of the result
+returned by <code>fn:json-to-xml</code> as defined in [XSLT 3.0].
+They are specified in a schema document located at <a href=
+"http://www.w3.org/2014/11/xslt-30/schema-for-json.xsd">http://www.w3.org/2014/11/xslt-30/schema-for-json.xsd</a>.</p>
+</div>
+<div>
+<h2><a name="normrefs" id="normrefs"></a>5 Normative
+References</h2>
+<p>These documents describe the names that are defined in this
+namespace at the time of publication. The W3C reserves the right to
+define additional names in this namespace in the future.</p>
+<dl>
+<dt class="label"><span><a name="xpath-functions-31-ref" id=
+"xpath-functions-31-ref"></a>XPath and XQuery Functions and
+Operators 3.1</span></dt>
+<dd>
+<div class="resource">
+<p><a href=
+"http://www.w3.org/TR/2014/WD-xpath-functions-31-2014101/">XPath
+and XQuery Functions and Operators 3.1</a> (1 October 2014
+version)</p>
+</div>
+</dd>
+<dt class="label"><span><a name="xslt-30-ref" id=
+"xslt-30-ref"></a>XSLT 3.0</span></dt>
+<dd>
+<div class="resource">
+<p><a href="http://www.w3.org/TR/2014/CR-xslt-30-20141119/">XSL
+Transformations (XSLT) 3.0</a> (19 November 2014 version)</p>
+</div>
+</dd>
+</dl>
+</div>
+<div>
+<h2><a name="nonnormrefs" id="nonnormrefs"></a>6 Non-Normative
+References</h2>
+<dl>
+<dt class="label"><span><a name="rddl-ref" id=
+"rddl-ref"></a>Resource Directory Description Language
+(RDDL)</span></dt>
+<dd>
+<div class="resource">
+<p><a href="http://www.rddl.org/">Resource Directory Description
+Language (RDDL)</a> (4 July 2007)</p>
+</div>
+</dd>
+<dt class="label"><span><a name="grddl-ref" id=
+"grddl-ref"></a>Gleaning Resource Descriptions from Dialects of
+Languages (GRDDL)</span></dt>
+<dd>
+<div class="resource">
+<p><a href="http://www.w3.org/TR/grddl/">Gleaning Resource
+Descriptions from Dialects of Languages (GRDDL)</a> (Recommendation
+of 11 September 2007)</p>
+</div>
+</dd>
+<dt class="label"><span><a name="rdf-ref" id="rdf-ref"></a>Resource
+Description Framework (RDF): Concepts and Abstract
+Syntax</span></dt>
+<dd>
+<div class="resource">
+<p><a href="http://www.w3.org/TR/rdf-concepts/">Resource
+Description Framework (RDF): Concepts and Abstract Syntax</a>
+(Recommendation of 10 February 2004)</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</body>
+</html>

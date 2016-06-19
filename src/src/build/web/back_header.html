@@ -1,0 +1,123 @@
+<nav class="navbar navbar-default navbar-cls-top " role="navigation" style=" margin-bottom:0;">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+</nav> 
+<!-- /. NAV TOP  -->
+<nav class="navbar-default navbar-side" role="navigation">
+    <div class="sidebar-collapse"/>
+    <ul class="nav" id="main-menu">
+        <li class="text-center">
+            <img src="Template/images/staff4.png" class="user-image img-responsive"/>
+        </li>
+
+        <#if staff??>
+        <#if staff=="Amministrazione">
+        <li>
+            <#if active=="1">  
+            <a class="active-menu"  href="pannello_amministratore"><i class="fa fa-desktop fa-3x"></i> Pannello ${staff} </a>
+            <#else>
+            <a  href="pannello_amministratore"><i class="fa fa-desktop fa-3x"></i> Pannello ${staff} </a>
+            </#if>
+        </li>
+        <li>
+            <#if active=="2">
+            <a class="active-menu"  href="utenze"><i class="fa fa-users fa-3x"></i> Utenze</a>
+            <#else>
+            <a href="utenze"><i class="fa fa-users fa-3x"></i> Utenze</a>
+            </#if>
+        </li>
+        <li>
+            <#if active=="3">
+            <a  class="active-menu" href="backprofilo?staff=${staff}&active=3"><i class="fa fa-user fa-3x"></i> Profilo</a>
+            <#else>
+            <a   href="backprofilo?staff=${staff}&active=3"><i class="fa fa-user fa-3x"></i> Profilo</a>
+            </#if>
+        </li>	
+        <#elseif staff=="Revisione Trascrizioni">
+        <li>
+            <#if active=="1">    
+            <a  class="active-menu"  href="pannello_revisore_trascrizioni?&active=1" ><i style="float:left;" class="fa fa-desktop fa-3x"></i> Pannello ${staff} </a>
+            <#else>
+            <a   href="pannello_revisore_trascrizioni?&active=1"><i style="float:left;" class="fa fa-desktop fa-3x"></i> Pannello ${staff} </a>
+            </#if>
+        </li>
+        <li>
+            <#if active=="2">
+            <a  class="active-menu" href="backprofilo?staff=${staff}&active=2"><i class="fa fa-user fa-3x"></i> Profilo</a>
+            <#else>
+            <a   href="backprofilo?staff=${staff}&active=2"><i class="fa fa-user fa-3x"></i> Profilo</a>
+            </#if>
+        </li>
+        <#elseif staff=="Trascrizioni">
+        <li>
+            <#if active=="1">    
+            <a  class="active-menu"  href="pannello_trascrittore?&active=1"><i class="fa fa-desktop fa-3x"></i> Pannello ${staff} </a>
+            <#else>
+            <a   href="pannello_trascrittore?&active=1"><i class="fa fa-desktop fa-3x"></i> Pannello ${staff} </a>
+            </#if>
+        </li>
+        <li>
+            <#if active=="2">    
+            <a  class="active-menu"  href="trascrizioni_in_revisione?&active=2"><i class="fa fa-check-square-o fa-3x"></i> Trascrizioni in revisione </a>
+            <#else>
+            <a   href="trascrizioni_in_revisione?&active=2"><i class="fa fa-check-square-o fa-3x"></i> Trascrizioni in revisione </a>
+            </#if>
+        </li>
+        <li>
+            <#if active=="3">   
+            <a  class="active-menu" href="backprofilo?staff=${staff}&active=3"><i class="fa fa-user fa-3x"></i> Profilo</a>
+            <#else>
+            <a  href="backprofilo?staff=${staff}&active=3"><i class="fa fa-user fa-3x"></i> Profilo</a>
+            </#if>
+        </li>
+        <#elseif staff=="Revisione Acquisizioni">
+        <li>
+            <#if active=="1">    
+            <a  class="active-menu"  href="pannello_revisore_immagini?&active=1" ><i style="float:left;" class="fa fa-desktop fa-3x"></i> Pannello ${staff} </a>
+            <#else>
+            <a   href="pannello_revisore_immagini?&active=1"><i style="float:left;" class="fa fa-desktop fa-3x"></i> Pannello ${staff} </a>
+            </#if>
+        </li>
+        <li>
+            <#if active=="2">
+            <a  class="active-menu" href="backprofilo?staff=${staff}&active=2"><i class="fa fa-user fa-3x"></i> Profilo</a>
+            <#else>
+            <a   href="backprofilo?staff=${staff}&active=2"><i class="fa fa-user fa-3x"></i> Profilo</a>
+            </#if>
+        </li>
+        <#elseif staff=="Acquisizioni">
+        <li>
+            <#if active=="1">   
+            <a class="active-menu"  href="acquisizione"><i class="fa fa-file-image-o fa-3x"></i>Acquisizioni</a>
+            <#else>
+            <a href="acquisizione"><i class="fa fa-file-image-o fa-3x"></i>Acquisizioni</a>
+            </#if>
+        </li>
+        <li>
+            <#if active=="2">  
+            <a  class="active-menu" href="immagini_in_revisione"><i class="fa fa-check-square-o fa-3x"></i>Immagini in revisione</a>
+            <#else>
+            <a href="immagini_in_revisione"><i class="fa fa-check-square-o fa-3x"></i>Immagini in revisione</a>
+            </#if>
+        </li>
+        <li>
+            <#if active=="3">   
+            <a  class="active-menu" href="backprofilo?staff=${staff}&active=3"><i class="fa fa-user fa-3x"></i> Profilo</a>
+            <#else>
+            <a  href="backprofilo?staff=${staff}&active=3"><i class="fa fa-user fa-3x"></i> Profilo</a>
+            </#if>
+        </li>	
+        </#if>
+        <li>
+            <a  href="logout"><i class="fa fa-sign-out fa-3x"></i>Logout</a>
+        </li>
+    </ul>
+    <#else>
+    </#if>
+</nav>  

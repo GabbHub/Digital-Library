@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://www.tei-c.org/ns/1.0" uri="www.tei-c.org/ns/1.0/index"/>
+    <system systemId="http://www.lodel.org/​ns/​tei.openedition.1.0.xsd" uri="lodel.org/.ns/.tei.openedition.1.0.xsd"/>
+    <system systemId="http://www.w3.org/2007/schema-for-xslt20.xsd" uri="www.w3.org/2007/schema-for-xslt20.xsd"/>
+    <system systemId="http://www.w3.org/2001/xml.xsd" uri="www.w3.org/2001/xml.xsd"/>
+    <system systemId="http://www.w3.org/2001/XMLSchema.xsd" uri="www.w3.org/2001/XMLSchema.xsd"/>
+    <system systemId="http://www.tei-c.org/ns/Examples" uri="www.tei-c.org/ns/examples/index"/>
+    <system systemId="http://www.w3.org/1999/xhtml" uri="www.w3.org/1999/xhtml/index.xml"/>
+    <system systemId="http://www.w3.org/2005/xpath-functions" uri="www.w3.org/2005/xpath-functions/index.xml"/>
+    <system systemId="http://www.oxygenxml.com/ns/doc/xsl" uri="www.oxygenxml.com/ns/doc/xsl/index"/>
+</catalog>

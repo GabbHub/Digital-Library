@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<footer>
+    <div class="footer_bg">
+        <div class="wrap">
+            <div class="footer">
+                <div class="span_of_4">
+                    <div class="span1_of_4">
+                        <h4>Contatto</h4>
+                        <p>Universit&agrave; degli studi dell'Aquila, via Vetoio 1 Coppito</p>	                                
+                    </div>                 
+                </div>
+                <div class="footer_top">
+                    <#if session??>
+                    <div class="f_nav1">
+                        <ul>
+                            <li><a href="index">home</a></li>
+                            <li><a href="logout">logout</a></li>
+                        </ul>
+                    </div>
+
+                    <#else>
+                    <div class="f_nav1">
+                        <ul>
+                            <li><a href="index">home</a></li>
+                            <li><a href="login">login</a></li>
+                            <li><a href="register">registrati</a></li>
+                        </ul>
+                    </div>
+                    </#if>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

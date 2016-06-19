@@ -1,0 +1,33 @@
+<ns1:TEI xmlns:ns1="http://www.tei-c.org/ns/1.0"
+    version="5.0">
+  <ns1:teiHeader>
+    <ns1:fileDesc>
+      <ns1:titleStmt>
+        <ns1:title />
+      </ns1:titleStmt>
+      <ns1:publicationStmt>
+        <ns1:p />
+      </ns1:publicationStmt>
+      <ns1:sourceDesc>
+        <ns1:p />
+      </ns1:sourceDesc>
+    </ns1:fileDesc>
+    <ns1:encodingDesc>
+      <ns1:projectDesc>
+        <ns1:p />
+      </ns1:projectDesc>
+      <ns1:tagsDecl />
+      <ns1:appInfo>
+        <ns1:application ident="ident" version="5.0">
+          <ns1:desc />
+        </ns1:application>
+      </ns1:appInfo>
+    </ns1:encodingDesc>
+    <ns1:profileDesc />
+  </ns1:teiHeader>
+  <ns1:text>
+    <ns1:body>
+      <ns1:p />
+    </ns1:body>
+  </ns1:text>
+</ns1:TEI>

@@ -1,0 +1,123 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html xmlns="http //www.w3.org/1999/xhtml">
+    <#include "framepublic.html">
+    <#include "header.html">
+    <!-- start header -->
+    <!-- start slider -->
+    <div class="slider_bg">
+        <div class="wrap">
+            <div class="slider">
+                <#if opera??>
+                <h2>${opera.titolo}</h2>
+                <h3>${opera.autore}</h3>
+                <#else>
+                </#if>
+            </div>
+        </div>
+    </div>
+    <!-- start main -->
+    <div class="main_bg">
+        <div class="wrap">
+            <div class="main">
+                <div class="content">
+                    <!-- start details -->
+                    <#if opera??>
+                    <div class="details">
+                        <br/>
+                        <br/>
+                        <h2>Anno:${opera.anno}, Lingua:${opera.lingua}</h2>
+
+                        <#if immagine??>
+                        <form action="details?opera=${opera.titolo}" method="POST">
+                            <input  type="hidden" name="img" value="${(maxpage)}"/>
+                            <button type="submit" style="       float:right;                         
+                                    display: inline-block;
+                                    font-size: 0.8925em;
+                                    color: #ffffff;
+                                    background: #34495e;
+                                    margin-left: 8px;
+                                    text-transform: capitalize;
+                                    border-radius: 2px;
+                                    -webkit-border-radius: 2px;
+                                    -moz-border-radius: 2px;
+                                    -o-border-radius: 2px;
+                                    -webkit-transition: all 0.3s ease-in-out;
+                                    -moz-transition: all 0.3s ease-in-out;
+                                    -o-transition: all 0.3s ease-in-out;
+                                    transition: all 0.3s ease-in-out;">Ultima</button>
+                        </form>
+                        <form action="details?opera=${opera.titolo}" method="POST">
+                             <input style="float:right;" type="number" name="img" value="${immagine.numero_pagina}" min="0" max="${maxpage}"/>
+                            <button type="submit" style="	
+                                    float:right;                         
+                                    display: inline-block;
+                                    font-size: 0.8925em;
+                                    color: #ffffff;
+                                    background: #34495e;
+                                    text-transform: capitalize;
+                                    border-radius: 2px;
+                                    -webkit-border-radius: 2px;
+                                    -moz-border-radius: 2px;
+                                    -o-border-radius: 2px;
+                                    -webkit-transition: all 0.3s ease-in-out;
+                                    -moz-transition: all 0.3s ease-in-out;
+                                    -o-transition: all 0.3s ease-in-out;
+                                    transition: all 0.3s ease-in-out;">vai alla pagina</button>
+                        </form>
+                        <form action="details?opera=${opera.titolo}" method="POST">                  
+                            <button href="details?opera=${opera.titolo}&img=0" style="       float:right;                         
+                                    display: inline-block;
+                                    font-size: 0.8925em;
+                                    color: #ffffff;
+                                    background: #34495e;
+                                    margin-right: 8px;
+                                    text-transform: capitalize;
+                                    border-radius: 2px;
+                                    -webkit-border-radius: 2px;
+                                    -moz-border-radius: 2px;
+                                    -o-border-radius: 2px;
+                                    -webkit-transition: all 0.3s ease-in-out;
+                                    -moz-transition: all 0.3s ease-in-out;
+                                    -o-transition: all 0.3s ease-in-out;
+                                    transition: all 0.3s ease-in-out;">Prima</button> 
+                            <input  type="hidden" name="img" value="0"/>
+                        </form>
+
+                        <img class="img-dentro" src="${immagine.file}" alt="" />
+
+                        <#if immagine.numero_pagina!=0>
+
+                        <a class="btn-freccias" href="details?opera=${opera.titolo}&img=${(immagine.numero_pagina-1)}"><img class="icon-prev" src="Template/images/left-arrow.png"/></a>
+                        <#else>
+                        </#if>
+                        <#if opera.pubblicazione_trascrizioni==true>
+                        <span class="finedet">
+                            <a class="btn" href="gettrascrizione?image=${immagine.id?c}" target="_blank">Leggi Trascrizione</a>
+                        </span>
+                        <#else>
+                        </#if>
+                        <#if ultimapagina??>
+                        <#else>
+                        <a class="btn-frecciad" href="details?opera=${opera.titolo}&img=${(immagine.numero_pagina+1)}"><img class="icon-next" src="Template/images/right-arrow.png"/></a>
+                        </#if>
+                        <#else>
+                        </#if>
+
+                    </div>
+
+                    <#else>
+                    </#if>
+                    <!-- end details -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<#include "footer.html">
+</html>

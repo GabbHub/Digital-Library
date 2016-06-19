@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="fr" />
+    <title>Lodel, logiciel d'édition électronique</title>
+    <meta name="url" content="http://www.lodel.org" />
+    <meta name="generator" content="Lodel 1.0" />
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+    <link rel="schema.MARCREL" href="http://www.loc.gov/loc.terms/relators/"/>
+    <meta name="DC.type" content="Text" />
+    <meta name="DC.format" content="text/html" />
+    <meta name="DC.identifier" scheme="URI" content="http://www.lodel.org" />
+    <meta name="DC.title" content="Lodel, logiciel d'édition électronique" />
+    <meta name="DC.publisher" content="Revues.org" />
+    <meta name="DC.language" scheme="RFC3066" content="fr" />
+    <meta name="keywords" content="Lodel, CMS, édition électronique, logiciel" />
+    <meta name="DC.subject" content="Lodel, CMS, édition électronique, logiciel" />
+    <meta name="description" content="Lodel est un logiciel d’édition électronique simple d'utilisation et adaptable à des usages particuliers. Il appartient à la famille des gestionnaires de contenus (en anglais, Content management system, CMS) et s’est spécialisé dans l’édition de textes longs et complexes, s’inscrivant dans un environnement éditorial très structuré." />
+    <meta name="DC.description" content="Lodel est un logiciel d’édition électronique simple d'utilisation et adaptable à des usages particuliers. Il appartient à la famille des gestionnaires de contenus (en anglais, Content management system, CMS) et s’est spécialisé dans l’édition de textes longs et complexes, s’inscrivant dans un environnement éditorial très structuré." />
+    <meta name="DC.rights" content="© tous droits réservés" />
+    <meta name="DC.type" content="Collection" />
+    <link rel="alternate" type="application/rss+xml" title="Lodel, logiciel d'édition électronique, Documents" href="backend.html?format=rssdocuments" />
+    <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/cleo.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
+    <![endif]--></head>
+  <body id="home" class="default">
+    <div id="access"><a href="#nav">Navigation</a>&#160;&#8211;&#32;<a href="index.html?page=map">Plan du site</a></div><!-- #access -->
+    <div id="header">
+      <h1 id="siteName"><a title="Accueil" href="index.html">Lodel, logiciel d'édition électronique</a></h1>
+      <div id="download"><a href="http://sourcesup.cru.fr/frs/?group_id=193" title="Télécharger la dernière version de Lodel">Télécharger</a></div>
+    </div><!-- #header -->
+    <div id="outerWrapper">
+      <div id="wrapper">
+        <div id="content">
+          <div id="main">
+            <p id="crumbs"><a class="home" href="index.html">Accueil</a></p>
+            <div id="front">
+              <h1>Présentation</h1><img alt="" src="docannexe/file/580/lodel-small432.png" /><p class="texte" style="margin-top:0.494cm; margin-bottom:0.494cm;" dir="ltr"><strong><span class="lettrine">L</span>odel est un logiciel d’édition électronique simple d'utilisation et adaptable à des usages particuliers.</strong> Il appartient à la famille des gestionnaires de contenus (en anglais, <em>Content management system</em>, CMS) et s’est spécialisé dans l’édition de textes longs et complexes, s’inscrivant dans un environnement éditorial très structuré.</p>
+              <p class="texte" style="margin-top:0.494cm; margin-bottom:0.494cm;" dir="ltr">Lodel est particulièrement respectueux des conventions de l’édition scientifique, telles que les notes de bas de page, la structure du texte, les divers jeux de caractères correspondant à des langues non latines, les signes diacritiques, les petites capitales, les espaces insécables, etc.</p>
+              <p class="texte" style="margin-top:0.494cm; margin-bottom:0.494cm;" dir="ltr">Les documents à publier peuvent être préparés dans un logiciel de traitement de texte (Word, OpenOffice.org) e (...)
+                <p><a href="415">Lire la suite...</a></p>
+              </div>
+              <div id="showcase"><a href="248" title="Terrain. Revue d'ethnologie de l'Europe"><img alt="" src="docannexe/image/248/terrain.revues.org-small97.png" /></a><a href="618" title="1895. Revue de l’association française de recherche sur l’histoire du cinéma"><img alt="" src="docannexe/image/618/1895.revues.org-small97.png" /></a><a href="624" title="Articulo - Journal of Urban Research"><img alt="" src="docannexe/image/624/articulo.revues.org-small97.png" /></a><a href="622" title="VertigO - la revue électronique en sciences de l’environnement"><img alt="" src="docannexe/image/622/vertigo.revues.org-small97.png" /></a><a href="204" title="Études photographiques"><img alt="" src="docannexe/image/204/etudesphotographiques.revues.org-2-small97.png" /></a></div>
+              <div id="community">
+                <h1>Actualités de la communauté</h1>
+<h2 class="first">Le blog de Lodel</h2>
+<ul class="syndication first">
+  <li><a href="http://lodel.hypotheses.org/377">Publication de Lodel 1.0 et OTX 1.0 !</a></li>
+  <li><a href="http://lodel.hypotheses.org/363">Configuration pour l’utilisation de ServOO</a></li>
+  <li><a href="http://lodel.hypotheses.org/347">Migration Lodel 0.9 vers Lodel 1.0</a></li>
+  <li><a href="http://lodel.hypotheses.org/265">Migration lodel 0.7 vers 0.9 : un cas concret</a></li>
+  <li><a href="http://lodel.hypotheses.org/255">Changement d’URL de ServOO pour Lodel 0.8 et 0.9 ; Fin de ServOO pour Lodel 0.7 le 28/02/2014</a></li>
+  <li class="last"><a rel="external" class="external" href="http://blog.lodel.org/" title="Toutes les actualités">Accéder au site&#8230;</a></li>
+</ul></div>
+              <div id="latest">
+                <h1>Nouveautés</h1>
+                <h2>Lodel.org</h2>
+                <ul class="summary">
+                  <li class="textes">
+                    <div class="title"><a href="444"><span xml:lang="fr" lang="fr">L’équipe de Lodel</span></a>&#32;</div>
+                    <div class="date">14 mars 2016</div>
+                  </li>
+                  <li class="textes">
+                    <div class="author"><strong>Jean-François <span class="familyName">Rivière</span> et Nahuel <span class="familyName">Angelinetti</span></strong></div>
+                    <div class="title"><a href="701"><span xml:lang="fr" lang="fr">Composer un document en TEI pour Lodel 1.0</span></a>&#32;</div>
+                    <div class="date">29 avril 2015</div>
+                  </li>
+                  <li class="textes">
+                    <div class="author"><strong>Romain <span class="familyName">Boistel</span></strong></div>
+                    <div class="title"><a href="715"><strong><span xml:lang="en" lang="en">Documentation for the OpenEdition TEI schema</span></strong></a>&#32;</div>
+                    <div class="date">29 avril 2015</div>
+                  </li>
+                  <li class="textes">
+                    <div class="author"><strong>Jean-François <span class="familyName">Rivière</span> et Nahuel <span class="familyName">Angelinetti</span></strong></div>
+                    <div class="title"><a href="719"><span xml:lang="fr" lang="fr">Creating a TEI document in Lodel 1.0</span></a>&#32;</div>
+                    <div class="date">29 avril 2015</div>
+                  </li>
+                  <li class="textes">
+                    <div class="title"><a href="662"><span xml:lang="fr" lang="fr">Les formations Lodel</span></a>&#32;</div>
+                    <div class="date">30 septembre 2013</div>
+                  </li>
+                </ul>
+              </div>
+            </div><!-- #main -->
+            <div id="news">
+              <h1><span class="text">Actualités</span></h1>
+              <div id="syndication">
+<h2 class="first">L'édition électronique ouverte. Le blog de Revues.org</h2>
+<ul class="syndication first">
+  <li><a href="http://leo.hypotheses.org/12884">OpenEdition au Salone Internazionale del Libro, Turin, 12-16 mai 2016</a></li>
+  <li><a href="http://leo.hypotheses.org/12861">La revue Cybergéo : 20 ans déjà !</a></li>
+  <li><a href="http://leo.hypotheses.org/12868">OpenEdition au congrès de l’Acfas, 10 mai 2016, Montréal</a></li>
+  <li><a href="http://leo.hypotheses.org/12847">Journée d’études LusOpenEdition, Lisbonne, 8 avril 2016</a></li>
+  <li><a href="http://leo.hypotheses.org/12832">Journée internationale de la Francophonie 2016</a></li>
+  <li class="last"><a rel="external" class="external" href="http://leo.hypotheses.org/" title="Toutes les actualités">Accéder au site&#8230;</a></li>
+</ul><h2 class="">En direct de la forge de Lodel (derniers commit)</h2>
+<ul class="syndication ">
+  <li><a href="https://github.com/OpenEdition/lodel/commit/ec3d99c6e04992610c0bbc79c4706a31135917aa">maquette bleu dans me-revorg : suppression de balises html dans la variable LS TITREFLUX utilisé dans un attribut html</a></li>
+  <li><a href="https://github.com/OpenEdition/lodel/commit/f5a36ae0f04353411e1b42be2dbe90a86d87fb93">maquette bleu dans me-revorg : correction bug parser lodelscript sur un commentaire html</a></li>
+  <li><a href="https://github.com/OpenEdition/lodel/commit/1e24f63a122c276da59ece1fb77801e868984096">correction lang.php</a></li>
+  <li><a href="https://github.com/OpenEdition/lodel/commit/191039f1a5e926529065267e647b590488bc568f">Look through EM entities ordered by fieldgroup &#38; rank in the TEI parser</a></li>
+  <li><a href="https://github.com/OpenEdition/lodel/commit/c43fafca449ba64682dfa8836d41fdfed58af629">support de recaptcha v2 en plus de v1</a></li>
+  <li><a href="https://github.com/OpenEdition/lodel/commit/291c340b3dcc39c4c0eff25b8e912e5dc439fb2e">Merge branch 'better-install'</a></li>
+  <li class="last"><a rel="external" class="external" href="http://sourcesup.cru.fr/" title="Toutes les actualités">Accéder au site&#8230;</a></li>
+</ul><h2 class="">PLUME - Logiciels pour l'Enseignement Supérieur et la Recherche</h2>
+<ul class="syndication ">
+  <li class="last"><a rel="external" class="external" href="http://www.projet-plume.org/" title="Toutes les actualités">Accéder au site&#8230;</a></li>
+</ul><h2 class="">Framasoft - Logiciels libres</h2>
+<ul class="syndication ">
+  <li><a href="http://www.framasoft.net/article5239.html">Calculs_pour_Soroban</a></li>
+  <li><a href="http://www.framasoft.net/article5238.html">Rubedo</a></li>
+  <li><a href="http://www.framasoft.net/article5237.html">Live_Raizo</a></li>
+  <li><a href="http://www.framasoft.net/article5236.html">DirectNews_France</a></li>
+  <li><a href="http://www.framasoft.net/article5235.html">Ancestromania</a></li>
+  <li class="last"><a rel="external" class="external" href="http://www.framasoft.net/" title="Toutes les actualités">Accéder au site&#8230;</a></li>
+</ul><h2 class="last">AFUL - Association Francophone des Utilisateurs de Logiciels Libres</h2>
+<ul class="syndication last">
+  <li><a href="https://aful.org/nouvelles/assemblee-generale-2016-aful-paris-france">Assembl&#233;e G&#233;n&#233;rale 2016 de l'AFUL &#224; Paris (France)</a></li>
+  <li><a href="https://aful.org/communiques/ministere-education-nationale-partenariat-indigne-microsoft">Partenariat indigne entre le Minist&#232;re de l'&#201;ducation Nationale et Microsoft</a></li>
+  <li><a href="https://aful.org/nouvelles/racketiciel-dernier-tir-judiciaire">Racketiciel : Dernier « tir » judiciaire</a></li>
+  <li><a href="https://aful.org/nouvelles/aful-salue-nouvelle-mouture-rgi-participe-appel-commentaires">L'AFUL salue la proposition d'actualisation du RGI et r&#233;pond &#224; l'appel &#224; commentaires</a></li>
+  <li><a href="https://aful.org/communiques/denonce-menace-loi-sur-renseignement">L'AFUL d&#233;nonce la menace que repr&#233;sente la loi sur le renseignement sur ses fondements statutaires</a></li>
+  <li class="last"><a rel="external" class="external" href="http://www.aful.org" title="Toutes les actualités">Accéder au site&#8230;</a></li>
+</ul></div>
+            </div><!-- #news --></div><!-- #content-->
+          <div id="nav">  
+            <h1 class="hidden">Navigation</h1>  
+            <ul id="navbar">    
+              <li><a href="52">Lodel en 5 min</a></li>    
+              <li><a href="571">Lodel en images</a></li>    
+              <li><a href="577">Documentation</a></li>    
+              <li><a href="581">Communauté</a></li>    
+              <li><a href="62">Téléchargements</a></li>    
+              <li><a href="448">À propos</a></li>  </ul><!-- #navbar -->  
+            <div id="Cleo">    
+              <p><a href="http://cleo.cnrs.fr/"><strong>Développé par le Centre pour l'édition électronique ouverte</strong><br /><strong xml:lang="en" lang="en">Software developped by the Center for open electronic publishing</strong></a></p>  </div>  
+            <div id="Logos">    
+              <h2>Soutenu par</h2>    
+              <ul>      
+                <li><a href="http://www.tge-adonis.fr/" title="Très Grand Équipement Adonis"><img alt="Logo Adonis" src="images/logo-adonis.png" width="125" height="41" /></a></li>      
+                <li><a href="http://www.cnrs.fr/" title="Centre national de la recherche scientifique"><img alt="Logo CNRS" src="images/logo-cnrs.png" width="72" height="72" /></a></li>      
+                <li><a href="http://www.ehess.fr/" title="École des hautes études en sciences sociales"><img alt="Logo EHESS" src="images/logo-ehess.png" width="66" height="66" /></a></li>      
+                <li><a href="http://www.up.univ-mrs.fr/" title="Université de Provence"><img alt="Logo Université de Provence" src="images/logo-up.png" width="68" height="70" /></a></li>      
+                <li><a href="http://www.univ-avignon.fr/" title="Université d'Avignon"><img alt="Logo Université d'Avignon" src="images/logo-uapv.png" width="55" height="94" /></a></li>    </ul>  </div>
+          </div><!-- #nav -->
+          <div id="footer">  
+            <p><a href="index.html?page=map">Plan du site</a>&#160;| <a href="448">À propos</a>&#160;| Lodel est un projet du <a href="http://cleo.cnrs.fr/">Cléo-Revues.org</a>&#160;| <a href="backend.html">Flux de syndication</a>&#160;| <a href="http://www.lodel.org/">Édité avec Lodel</a></p>
+          </div><!-- #footer --></div><!-- #wrapper --></div><!-- #outerWrapper -->
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/common.min.js"></script>
+      <hr />
+      <script type="text/javascript" src="https://static.openedition.org/openbarre/js/cleo.js?date=2014-12-01"></script>
+      <script type="text/javascript" src="https://static.openedition.org/js/jquery.jsonp-latest.min.js"></script>
+      <script type="text/javascript"><!--
+//    jQuery.noConflict();
+    jQuery(document).ready(function($) {
+        if ( $.fn.fancybox == undefined ) {
+            $.getScript("https://static.openedition.org/js/fancybox/jquery.fancybox-1.3.1.js", function() {
+                $('a.iframe').fancybox();
+            });
+        } else {
+            $('a.iframe').fancybox();
+        }
+        authurl=
+        $.jsonp({
+            url: ('https://auth.openedition.org/authenticate'),
+            callbackParameter: 'callback',
+            success: function(data) {
+                $('#authdata').html('<img src="'+data.favicon+'"> <a href="'+data.url+'">'+data.name+'</a>');
+            },
+            error: function(data){
+            }
+        });
+        $('#plateformes li').live('touchend', function(e) {});
+        $('input[name=q]').focus(function() {
+            if ( $(this).attr('value') == 'Rechercher' ) {
+                $(this).attr('value', '');
+            }
+        });
+    });
+--></script>
+      <div id="openbarre">    
+        <div class="openedition">        
+          <div>            
+            <div class="first">        <a href="http://www.openedition.org">OpenEdition</a>        <ul class="submenu nav-toggle-show">                    
+                <li>            <span>OpenEdition Books</span>            <ul>                            
+                    <li><a href="http://books.openedition.org"><span class="title">OpenEdition Books</span>Livres en sciences humaines et sociales</a></li>                            
+                    <li><a href="http://books.openedition.org/catalogue">Livres</a></li>                            
+                    <li><a href="http://books.openedition.org/publishers">&Eacute;diteurs</a></li>                            
+                    <li><a href="http://books.openedition.org">En savoir plus</a></li>            </ul>          </li>          
+                <li>            <span>Revues.org</span>            <ul>                              
+                    <li><a href="http://www.revues.org"><span class="title">Revues.org</span>Revues en sciences humaines et sociales</a></li>                              
+                    <li><a href="http://www.openedition.org/catalogue-journals">Les revues</a></li>                              
+                    <li><a href="http://www.revues.org/6438">En savoir plus</a></li>            </ul>          </li>          
+                <li>            <span>Calenda</span>            <ul>                              
+                    <li><a href="http://calenda.org"><span class="title">Calenda</span>Annonces scientifiques</a></li>                              
+                    <li><a href="http://calenda.org/search">Acc&eacute;der aux annonces</a></li>                              
+                    <li><a href="http://calenda.org/about">En savoir plus</a></li>            </ul>          </li>          
+                <li>                <span>Hypoth&egrave;ses</span>                <ul>                                  
+                    <li><a href="http://hypotheses.org"><span class="title">Hypoth&egrave;ses</span>Carnets de recherche</a></li>                                  
+                    <li><a href="http://www.openedition.org/catalogue-notebooks">Acc&eacute;der aux carnets</a></li>                                  
+                    <li><a href="http://hypotheses.org/about">En savoir plus</a></li>                </ul>          </li>        </ul>      </div>            
+            <div class="last nav-toggle-show">                
+              <ul class="submenu">                    
+                <li>            <span>Lettre &amp; alertes</span>            <ul>                              
+                    <li><a href="http://newsletter.openedition.org"><span class="title">Lettre</span>S'abonner &agrave; la Lettre d'OpenEdition</a></li>                              
+                    <li><a href="http://search.openedition.org/indexalert.php?a=description"><span class="title">Alertes &amp; abonnements</span>Acc&eacute;der au service</a></li>            </ul>          </li>          
+                <li>            <a href="http://www.openedition.org/14043">OpenEdition Freemium</a>          </li>        </ul>                
+              <div class="align-right">                    
+                <form action="//search.openedition.org/" method="get">                        
+                  <fieldset>                            
+                    <div>                                
+                      <input name="q" type="text" />
+                      <button type="submit" class="icons icon-search"><span>Rechercher</span></button>              </div>            </fieldset>          </form>        </div>      </div>    </div>  </div>    
+        <div class="context nav-toggle-show">        
+          <div class="title-share">              
+            <ul class="submenu">                    
+              <li class="bg-nav">                    <span class="icons icon-info"><span>Informations</span></span>                    <ul>                                                                    </ul>                </li>                        </ul>              
+            <ul class="share">                    
+              <li class="icons icon-twitter"><a href="http://twitter.com/share?text=Lodel%2C+logiciel+d%27%C3%A9dition+%C3%A9lectronique&amp;url=&amp;via=openeditionsays" class="twitter button-wrap"><span>Twitter</span></a></li>                    
+              <li class="icons icon-facebook"><a href="https://www.facebook.com/sharer.php?u=Lodel%2C+logiciel+d%27%C3%A9dition+%C3%A9lectronique&amp;title=" class="facebook button-wrap"><span>Facebook</span></a></li>                    
+              <li class="icons icon-google-plus"><a href="https://plus.google.com/share?url=Lodel%2C+logiciel+d%27%C3%A9dition+%C3%A9lectronique&amp;title=" class="google button-wrap"><span>Google +</span></a></li>        </ul>    </div>        
+          <div class="align-right">              
+            <div id="authdata"></div>    </div>  </div>    
+        <button class="icons icon-nav"></button>    <!--[if lte IE 9]>          
+        <link rel="stylesheet" href="https://static.openedition.org/openbarre/css/ie_openbarre.css">    <![endif]--></div>
+      </body>
+    </html>
